@@ -1,28 +1,77 @@
+.lists-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2vw;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.lists-flex .lost-col,
+.lists-flex .found-col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap");
 /* Code generated in response to prompt: "Set frame to Google Slide size" with GitHub Copilot using GPT-4.1 */
 .design-size {
-
   width: 1200px;
   height: 245px;
   position: relative;
   background: #fff;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: visible;
   flex-shrink: 0;
-
-  
 }
 /* End generated code */
 
 /* Code generated in response to prompt: "Lost and Found layout" with GitHub Copilot using GPT-4.1 */
+
 .my-design {
   position: relative;
   width: 100%;
   height: 245px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: "Inter", sans-serif;
+}
+
+.lf-header-row {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(48px, 6vw, 96px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-top: 18px;
+  margin-bottom: 0.3em;
+  letter-spacing: 0.01em;
+  color: #1a237e;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.1), 0 1px 0 #fff;
+}
+.lf-title .icon {
+  font-size: 1.1em;
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+.lf-updated {
+  font-size: 0.6em;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #666;
+  margin-left: 0.5em;
+}
+.lf-instructions {
+  text-align: center;
+  font-size: clamp(16px, 2vw, 28px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5em;
+  text-decoration: underline;
 }
 
 .title-row {
@@ -30,26 +79,25 @@
 }
 
 .title-lost {
-  grid-column: 1;
-  grid-row: 1;
-  font-size: clamp(24px, 6vw, 48px);
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: clamp(48px, 7vw, 100px);
+  font-family: "Poppins", sans-serif;
   color: #ff5050;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  padding: 10px 5px;
+  padding: 10px 5px 0 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.3em;
 }
 
 .title-and {
   grid-column: 2;
   grid-row: 1;
-  font-size: clamp(16px, 4vw, 32px);
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: clamp(40px, 6vw, 80px);
+  font-family: "Poppins", sans-serif;
   color: #333;
-  font-weight: normal;
+  font-weight: 600;
   text-align: center;
   padding: 10px 5px;
   display: flex;
@@ -58,17 +106,16 @@
 }
 
 .title-found {
-  grid-column: 3;
-  grid-row: 1;
-  font-size: clamp(24px, 6vw, 48px);
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: clamp(48px, 7vw, 100px);
+  font-family: "Poppins", sans-serif;
   color: #4f9cff;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  padding: 10px 5px;
+  padding: 10px 5px 0 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.3em;
 }
 
 .lists-row {
@@ -81,7 +128,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 10px 20px 10px;
+  padding: 0 20px 20px 30px;
   overflow: visible;
 }
 
@@ -91,37 +138,120 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 0 10px 20px 10px;
+  padding: 0 30px 20px 20px;
   overflow: visible;
 }
 
 .lost {
-  font-size: clamp(14px, 3vw, 24px);
+  font-size: clamp(35px, 4vw, 70px);
   color: #ff5050;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   margin-bottom: 6px;
-  text-align: left;
+  text-align: center;
   width: 100%;
 }
 
 .found {
-  font-size: clamp(14px, 3vw, 24px);
+  font-size: clamp(35px, 4vw, 70px);
   color: #4f9cff;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   margin-bottom: 6px;
-  text-align: right;
+  text-align: center;
   width: 100%;
 }
 
-.lostlist, .foundlist {
+.lostlist,
+.foundlist {
   width: 100%;
-  font-size: clamp(10px, 1.5vw, 14px);
+  font-size: clamp(18px, 2vw, 28px);
   margin: 0;
-  padding-left: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   box-sizing: border-box;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.lostlist li,
+.foundlist li {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #f8f8ff;
+  border-radius: 6px;
+  min-height: 1.5em;
+  word-break: break-word;
+}
+.lostlist li {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.lostlist .date,
+.foundlist .date {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-right: 8px;
+  color: #222;
+  display: flex;
+  align-items: center;
+}
+.lostlist .date::before,
+.foundlist .date::before {
+  content: "📅";
+  font-size: 0.9em;
+  margin-right: 0.2em;
+}
+
+.foundlist .new {
+  color: #e6b800;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin-left: 0.5em;
+  font-size: 0.8em;
+  letter-spacing: 0.01em;
 }
 
 .foundlist {
   text-align: right;
 }
+
+.lf-footer {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(16px, 2vw, 28px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #333;
+  margin-top: 1.2em;
+  margin-bottom: 0.2em;
+  line-height: 1.3;
+}
+.lf-footer .footer-loc {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-bottom: 0.2em;
+  display: inline-block;
+}
+.lf-footer .footer-deadline {
+  color: #b00;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  display: inline-block;
+}
 /* End generated code */
+/* Match improved design size to original design aspect ratio */
+.design-size {
+  width: 1906px;
+  height: 1112px;
+}
+
+.my-design {
+  height: 1112px;
+}
